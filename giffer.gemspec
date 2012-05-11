@@ -1,10 +1,13 @@
+require './lib/giffer/version'
+
 Gem::Specification.new do |s|
+  s.files = Dir.glob("lib/**/*.rb")
+  s.test_files  = Dir.glob("{spec,test}/**/*.rb")
+
   s.name        = "giffer"
   s.version     = Giffer::VERSION
   s.authors     = ["Denis Ivanov"]
   s.email       = ["visible@jumph4x.net"]
-  s.files = Dir.glob("lib/**/*.rb")
-  s.test_files  = Dir.glob("{spec,test}/**/*.rb")
 
   s.summary     = "Giffer gives .GIFs"
   s.description = "Sends a request to www.gifbin.com and parses out the GIF url"
